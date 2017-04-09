@@ -1,7 +1,7 @@
 angular.module('apsApp').service('mainService', function($http, $stateParams){
 
   this.forWeather=function(){
-    return $http.get("https://api.openweathermap.org/data/2.5/weather?zip="+$stateParams.zip+",us&appid=c564d7d14ebfc62e9a19d46594f5be0e").then(function(response){
+    return $http.get("http://api.openweathermap.org/data/2.5/weather?zip="+$stateParams.zip+",us&appid=c564d7d14ebfc62e9a19d46594f5be0e").then(function(response){
       return response.data;
     })
   }
